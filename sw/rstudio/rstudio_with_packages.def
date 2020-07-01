@@ -1,0 +1,35 @@
+# Pulled rstudiobase_latest.sif down locally for building
+# much faster that way
+BootStrap: localimage
+From: rstudiobase_latest.sif
+
+%files
+    install_packages.R /root
+
+%labels
+    Author: Jason C. Nucciarone
+    Maintainer: Jason C. Nucciarone
+    Owner: Jason C. Nucciarone
+    Version: v1.0
+
+%post
+    export PATH=/usr/local/miniconda/bin:${PATH}
+    export LD_LIBRARY_PATH=/usr/local/miniconda/lib:${LD_LIBRARY_PATH}
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+
+    Rscript ${HOME}/install_packages.R
+
+%environment
+    export PATH=/usr/local/miniconda/bin:${PATH}
+    export LD_LIBRARY_PATH=/usr/local/miniconda/lib:${LD_LIBRARY_PATH}
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export RSTUDIO_WHICH_R=/usr/local/miniconda/bin/R
+    export XDG_RUNTIME_DIR=${HOME}
+
+%help
+    If you have any issues using this
+    container during the workshop then
+    please contact Jason at the ICDS-iASK
+    center: iask@ics.psu.edu
