@@ -1,0 +1,5 @@
+#!/bin/bash
+# Just ls in a local directory
+
+export microPath=/gpfs/group/dml129/default/microbiome_workshop2020/scripts 
+ls ${microPath}
