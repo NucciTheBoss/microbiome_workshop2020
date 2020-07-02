@@ -10,7 +10,8 @@ required by for the Microbiome workshop.
 Please note that what is installed in
 /gpfs/group/dml129/default/microbiome_workshop2020
 may differ from this repository as the
-actual set up version will contain conda environments
+actual setup version of this repository
+will contain conda environments
 
 ## Software
 The repository contains the following software:
