@@ -1,0 +1,28 @@
+#!/bin/bash
+# Setup symlink that connects to Qiime env
+# Add exec privledges before workshop
+
+cd ${HOME}
+export envPath=/gpfs/group/dml129/default/microbiome_workshop2020/sw/qiime2
+export symlinkPath=${HOME}/qiime2
+
+if [[ -d ${envPath} && ! -L ${symlinkPath} ]]; then
+    ln -s ${envPath} ${symlinkPath}
+    echo -e "\nUse the following commands to activate the qiime environment"
+    echo "$ module load python/3.6.3-anaconda5.0.1"
+    echo "$ cd ~"
+    echo -e "$ source activate qiime2\n"
+
+elif [ -L ${symlinkPath} ]; then
+    echo -e "\nThe symlink has already been setup"
+    echo "Use the following commands to activate the qiime environment"
+    echo "$ module load python/3.6.3-anaconda5.0.1"
+    echo "$ cd ~"
+    echo -e "$ source activate qiime2\n"
+
+elif [ ! -d ${envPath} ]; then
+    echo ${envPath} "does not exist"
+
+else
+    echo "Something went wrong, please contact i-ASK center"
+fi
