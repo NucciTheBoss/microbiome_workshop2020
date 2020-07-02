@@ -14,12 +14,14 @@ actual set up version will contain conda environments
 
 ## Software
 The repository contains the following software:
-* rstudio
-* qiime2
+* RStudio
+* Qiime2
 
 ## How-to-use
-* rstudio
+* [RStudio](#rstudio)
+* [Qiime2](#qiime2)
 
+### RStudio
 Simply use the following commands to load the rstudio module
 ```
 $ module use /gpfs/group/dml129/default/microbiome_workshop2020/sw/modules
@@ -44,8 +46,7 @@ To use Rscript quietly:
 ```
 $ chronic-Rscript
 ```
-* qiime2
-
+### Qiime2
 To setup access to Qiime2, you will first need to create a
 symlink to the environment in your home directory using the
 scripts module:
