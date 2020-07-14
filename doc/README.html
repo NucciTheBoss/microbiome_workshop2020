@@ -1,0 +1,74 @@
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#general-info">General info</a></li>
+<li><a href="#software">Software</a></li>
+<li><a href="#how-to-use">How-to-use</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<h2 id="general-info">General Info</h2>
+<p>This is the repository for the software required by for the Microbiome workshop. Please note that what is installed in /gpfs/group/dml129/default/microbiome_workshop2020 may differ from this repository as the actual setup version of this repository will contain conda environments.</p>
+<p>To view this documentation in a different format then please see the doc directory of this repository.</p>
+<h2 id="software">Software</h2>
+<p>The repository contains the following software:</p>
+<ul>
+<li>RStudio</li>
+<li>Qiime2</li>
+<li>Megan</li>
+<li>MALT</li>
+</ul>
+<h2 id="how-to-use">How-to-use</h2>
+<ul>
+<li><a href="#rstudio">RStudio</a></li>
+<li><a href="#qiime2">Qiime2</a></li>
+<li><a href="#megan">Megan</a></li>
+<li><a href="#malt">MALT</a></li>
+</ul>
+<h1 id="section"></h1>
+<h3 id="rstudio">RStudio</h3>
+<p>Simply use the following commands to load the rstudio module:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1">$ <span class="ex">module</span> use /gpfs/group/dml129/default/microbiome_workshop2020/sw/modules</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">$ <span class="ex">module</span> load rstudio</a></code></pre></div>
+<p>Now that you have the module loaded, here are the various ways that you can interact with it.</p>
+<p>To launch rstudio:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1">$ <span class="ex">rstudio</span></a></code></pre></div>
+<p>To use R:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1">$ <span class="ex">R</span></a></code></pre></div>
+<p>To use Rscript:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1">$ <span class="ex">Rscript</span></a></code></pre></div>
+<p>To use Rscript quietly:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1">$ <span class="ex">chronic-Rscript</span></a></code></pre></div>
+<h1 id="section-1"></h1>
+<h3 id="qiime2">Qiime2</h3>
+<p>To setup access to Qiime2, you will first need to create a symlink to the environment in your home directory using the scripts module:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" data-line-number="1">$ <span class="ex">module</span> use /gpfs/group/dml129/default/microbiome_workshop2020/sw/modules</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">$ <span class="ex">module</span> load scripts</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">$ <span class="ex">link_qiime2</span></a></code></pre></div>
+<p>This will then create a symlink to the qiime2 environment in your home directory. You can use the following commands to activate the environment:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" data-line-number="1">$ <span class="ex">module</span> load python/3.6.3-anaconda5.0.1</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">$ <span class="bu">cd</span> ~</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">$ <span class="bu">source</span> activate qiime2</a></code></pre></div>
+<p>To then verify that Qiime2 is working simply use the following command:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1">$ <span class="ex">qiime</span> --help</a></code></pre></div>
+<h1 id="section-2"></h1>
+<h3 id="megan">Megan</h3>
+<p>To setup access to Megan, you will first need to create a symlink to the environment in your home directory using the scripts module:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" data-line-number="1">$ <span class="ex">module</span> use /gpfs/group/dml129/default/microbiome_workshop2020/sw/modules</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">$ <span class="ex">module</span> load scripts</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">$ <span class="ex">link_megan</span></a></code></pre></div>
+<p>This will then create a symlink to the megan environment in your home directory. You can use the following commands to activate the environment:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" data-line-number="1">$ <span class="ex">module</span> load python/3.6.3-anaconda5.0.1</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">$ <span class="bu">cd</span> ~</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3">$ <span class="bu">source</span> activate megan</a></code></pre></div>
+<p>To then launch Megan’s GUI (need to be in an Interactive Desktop session) use the following command:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" data-line-number="1">$ <span class="ex">MEGAN</span></a></code></pre></div>
+<h1 id="section-3"></h1>
+<h3 id="malt">MALT</h3>
+<p>To access MALT, all you need to do is activate the <a href="#megan">Megan</a> environment:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" data-line-number="1">$ <span class="ex">module</span> load python/3.6.3-anaconda5.0.1</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">$ <span class="bu">cd</span> ~</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">$ <span class="bu">source</span> activate megan</a></code></pre></div>
+<p>Then, to test that you have access to MALT simply use the following command:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="ex">malt-build</span> -h</a></code></pre></div>
+<h1 id="section-4"></h1>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you run into any issues regarding the use of this repository then please contact either Jason or Justin at iask@ics.psu.edu.</p>
