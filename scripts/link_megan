@@ -8,14 +8,14 @@ export symlinkPath=${HOME}/megan
 
 if [[ -d ${envPath} && ! -L ${symlinkPath} ]]; then
     ln -s ${envPath} ${symlinkPath}
-    echo -e "\nUse the following commands to activate the qiime environment"
+    echo -e "\nUse the following commands to activate the megan environment"
     echo "$ module load python/3.6.3-anaconda5.0.1"
     echo "$ cd ~"
     echo -e "$ source activate megan\n"
 
 elif [ -L ${symlinkPath} ]; then
     echo -e "\nThe symlink has already been setup"
-    echo "Use the following commands to activate the qiime environment"
+    echo "Use the following commands to activate the megan environment"
     echo "$ module load python/3.6.3-anaconda5.0.1"
     echo "$ cd ~"
     echo -e "$ source activate megan\n"
